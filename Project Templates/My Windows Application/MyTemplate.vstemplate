@@ -1,0 +1,27 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>My Windows Applicaiton</Name>
+    <Description>Windows Application with proper settings and structure</Description>
+    <ProjectType>VC</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>My Windows Applicaiton</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="WindowsProject1.vcxproj" File="WindowsProject1.vcxproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="false" TargetFileName="$projectname$.vcxproj.filters">WindowsProject1.vcxproj.filters</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="main.cc">SRC\main.cc</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Resource.h">SRC\Resource.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="WindowsProject1.rc">RES\WindowsProject1.rc</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="small.ico">RES\small.ico</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="WindowsProject1.ico">RES\WindowsProject1.ico</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Readme.txt">LIBS\Readme.txt</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>
