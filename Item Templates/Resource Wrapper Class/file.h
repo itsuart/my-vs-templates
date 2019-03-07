@@ -23,6 +23,9 @@ namespace $rootnamespace$ {
         // returns true iff wrapped resource is valid
         explicit operator bool() const;
 
+        // returns true iff wrapped resource is valid
+        bool ok() const;
+
         operator WrappedType() const;
 
         WrappedType Unwrap() const;

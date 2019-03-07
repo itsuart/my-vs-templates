@@ -38,6 +38,11 @@ namespace $rootnamespace$ {
 
     // returns true iff wrapped resource is valid
     $itemname$::operator bool() const {
+        return ok();
+    }
+
+    // returns true iff wrapped resource is valid
+    bool $itemname$::ok() const{
         return m_resource != s_invalidValue;
     }
 
