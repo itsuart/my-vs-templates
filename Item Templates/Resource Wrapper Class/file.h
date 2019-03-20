@@ -28,10 +28,10 @@ namespace $rootnamespace$ {
 
         operator WrappedType() const;
 
-        WrappedType Unwrap() const;
+        WrappedType unwrap() const;
 
         // Force releasing the resource
-        void Release();
+        void release();
 
         WrappedType* p_value();
 

@@ -13,10 +13,10 @@ namespace $rootnamespace$ {
     {}
 
     $itemname$::~$itemname$(){
-        Release();
+        release();
     }
 
-    void $itemname$::Release(){
+    void $itemname$::release(){
         if (m_resource != s_invalidValue){
             #error CALL THE RESOURCE RELEASING FUNCTION HERE
             m_resource = s_invalidValue;
@@ -26,14 +26,17 @@ namespace $rootnamespace$ {
     $itemname$::$itemname$($itemname$&& other)
     : m_resource(other.m_resource)
     {
-        other.Release();
+        other.m_resource = s_invalidValue;
     }
 
     $itemname$& $itemname$::operator=($itemname$&& other){
-        if (&other == this) return *this;
-        Release();
-        m_resource = other.m_resource;
-        other.Release();
+        if (&other != this){
+            release();
+            m_resource = other.m_resource;
+            other.m_resource = s_invalidValue;
+        }
+
+        return *this;
     }
 
     // returns true iff wrapped resource is valid
@@ -50,7 +53,7 @@ namespace $rootnamespace$ {
         return m_resource;
     }
 
-    $itemname$::WrappedType $itemname$::Unwrap() const {
+    $itemname$::WrappedType $itemname$::unwrap() const {
         return m_resource;
     }
 
