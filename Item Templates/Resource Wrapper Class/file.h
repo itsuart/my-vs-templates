@@ -1,10 +1,12 @@
 #pragma once
+#include <type_traits>
 
 namespace $rootnamespace$ {
     class $itemname$ final {
     public:
         using WrappedType = #error REPLACE WITH PROPER WRAPPED TYPE
 
+        // Wraps over s_invalidValue
         $itemname$();
 
         explicit $itemname$(WrappedType resource);
@@ -30,12 +32,23 @@ namespace $rootnamespace$ {
 
         WrappedType unwrap() const;
 
-        // Force releasing the resource
+        // Force release the resource
         void release();
 
         WrappedType* p_value();
 
         const WrappedType* p_value() const;
+
+        template<typename = std::enable_if<std::is_pointer<WrappedType>::value> >
+        WrappedType operator->() {
+            return m_resource;
+        }
+
+        template<typename = std::enable_if<std::is_pointer<WrappedType>::value> >
+        const WrappedType operator->() const {
+            return m_resource;
+        }
+
 
         static const WrappedType s_invalidValue;
 
