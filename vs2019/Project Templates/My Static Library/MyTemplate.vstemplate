@@ -1,0 +1,24 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>My Static Library</Name>
+    <Description>Static library with proper settings and structure</Description>
+    <ProjectType>VC</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>My Static Library</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="Proper Static Library2.vcxproj" File="Proper Static Library2.vcxproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="false" TargetFileName="$projectname$.vcxproj.filters">Proper Static Library2.vcxproj.filters</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="dummy.cc">SRC\dummy.cc</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Readme.txt">EXPORTS\Readme.txt</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Readme.txt">LIBS\Readme.txt</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>
