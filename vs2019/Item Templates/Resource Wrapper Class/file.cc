@@ -23,13 +23,13 @@ namespace $rootnamespace$ {
         }
     }
 
-    $itemname$::$itemname$($itemname$&& other)
+    $itemname$::$itemname$($itemname$&& other) noexcept
     : m_resource(other.m_resource)
     {
         other.m_resource = s_invalidValue;
     }
 
-    $itemname$& $itemname$::operator=($itemname$&& other){
+    $itemname$& $itemname$::operator=($itemname$&& other) noexcept {
         if (&other != this){
             release();
             m_resource = other.m_resource;

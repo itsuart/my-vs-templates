@@ -13,24 +13,27 @@ namespace $rootnamespace$ {
 #error implement or delete
     }
 
-    $itemname$& $itemname$::operator=(const $itemname$&& other){
+    $itemname$& $itemname$::operator=(const $itemname$& other){
         if (&other == this){
             return *this;
         }
 #error implement or delete
+
+        return *this;
     }
 
 
-    $itemname$::$itemname$($itemname$&& other)
+    $itemname$::$itemname$($itemname$&& other) noexcept
     {
 #error implement or delete
     }
 
-    $itemname$& $itemname$::operator=($itemname$&& other){
+    $itemname$& $itemname$::operator=($itemname$&& other) noexcept {
         if (&other == this){
             return *this;
         }
 #error implement or delete
+        return *this;
     }
 
     // returns true iff wrapped resource is valid

@@ -20,8 +20,8 @@ namespace $rootnamespace$ {
 
         // But can be moved
 
-        $itemname$($itemname$&& other);
-        $itemname$& operator=($itemname$&& other);
+        $itemname$($itemname$&& other) noexcept;
+        $itemname$& operator=($itemname$&& other) noexcept;
 
         // returns true iff wrapped resource is valid
         explicit operator bool() const;

@@ -10,8 +10,8 @@ namespace $rootnamespace$ {
         $itemname$(const $itemname$& other) = delete;
         $itemname$& operator=(const $itemname$& other) = delete;
 
-        $itemname$($itemname$&& other) = delete;
-        $itemname$& operator=($itemname$&& other) = delete;
+        $itemname$($itemname$&& other) noexcept = delete;
+        $itemname$& operator=($itemname$&& other) noexcept = delete;
 
         // returns true if state of the object is valid
         explicit operator bool() const;
