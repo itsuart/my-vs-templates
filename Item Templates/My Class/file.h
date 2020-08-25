@@ -1,6 +1,7 @@
 #pragma once
 
 namespace $rootnamespace$ {
+
     class $itemname$ final {
     public:
         explicit $itemname$();

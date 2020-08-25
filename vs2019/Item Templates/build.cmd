@@ -1,0 +1,1 @@
+..\zip_folder_contents.exe "My Class" "Insert .h and .cc pair" "Resource Wrapper Class"

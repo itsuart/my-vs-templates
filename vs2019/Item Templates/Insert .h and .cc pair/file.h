@@ -2,4 +2,5 @@
 
 namespace $rootnamespace$ {
 
-} //namespace
+
+}

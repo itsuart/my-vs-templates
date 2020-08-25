@@ -1,16 +1,18 @@
 #pragma once
-#include <type_traits>
 
 namespace $rootnamespace$ {
+
     class $itemname$ final {
     public:
-        using WrappedType = #error REPLACE WITH PROPER WRAPPED TYPE
+        using Resource = #error REPLACE WITH PROPER WRAPPED TYPE
 
-        // Wraps over s_invalidValue
-        $itemname$();
+        constexpr $itemname$() : _resource(invalidValue){}
 
-        explicit $itemname$(WrappedType resource);
-        ~$itemname$();
+        explicit constexpr $itemname$(Resource value) : _resource(value){}
+
+        ~$itemname$(){
+           release();
+        }
 
         // Resource types can not be copied
 
@@ -19,40 +21,47 @@ namespace $rootnamespace$ {
 
         // But can be moved
 
-        $itemname$($itemname$&& other);
+        $itemname$($itemname$&& other)
+        : _resource(other._resource)
+        {
+            other._resource = invalidValue;
+        }
+
         $itemname$& operator=($itemname$&& other);
 
         // returns true iff wrapped resource is valid
-        explicit operator bool() const;
+        explicit operator bool() const {
+            return ok();
+        }
 
         // returns true iff wrapped resource is valid
-        bool ok() const;
+        bool ok() const {
+            return _resource != invalidValue;
+        }
 
-        operator WrappedType() const;
+        operator Resource() const{
+            return _resource;
+        }
 
-        WrappedType unwrap() const;
+        Resource value() const{
+            return _resource;
+        }
 
         // Force release the resource
         void release();
 
-        WrappedType* p_value();
-
-        const WrappedType* p_value() const;
-
-        template<typename = std::enable_if<std::is_pointer<WrappedType>::value> >
-        WrappedType operator->() {
-            return m_resource;
+        Resource* p_value(){
+            return &_resource;
         }
 
-        template<typename = std::enable_if<std::is_pointer<WrappedType>::value> >
-        const WrappedType operator->() const {
-            return m_resource;
+        const Resource* p_value() const{
+            return &_resource;
         }
 
-
-        static const WrappedType s_invalidValue;
+#error  REPLACE WITH PROPER INVALID VALUE
+        static constexpr Resource invalidValue = nullptr;
 
     private:
-        WrappedType m_resource;
+        Resource _resource;
     };
 }

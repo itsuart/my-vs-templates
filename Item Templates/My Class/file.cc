@@ -1,6 +1,7 @@
 #include "$itemname$.h"
 
 namespace $rootnamespace$ {
+
     $itemname$::$itemname$()
     {}
 

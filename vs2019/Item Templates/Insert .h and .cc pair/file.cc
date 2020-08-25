@@ -2,8 +2,10 @@
 
 namespace {
 
-} // namespace
+
+}
 
 namespace $rootnamespace$ {
 
-} //namespace
+
+}
