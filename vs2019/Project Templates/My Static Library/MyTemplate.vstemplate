@@ -14,10 +14,11 @@
     <Icon>__TemplateIcon.ico</Icon>
   </TemplateData>
   <TemplateContent>
-    <Project TargetFileName="Proper Static Library2.vcxproj" File="Proper Static Library2.vcxproj" ReplaceParameters="true">
-      <ProjectItem ReplaceParameters="false" TargetFileName="$projectname$.vcxproj.filters">Proper Static Library2.vcxproj.filters</ProjectItem>
-      <ProjectItem ReplaceParameters="false" TargetFileName="dummy.cc">SRC\dummy.cc</ProjectItem>
-      <ProjectItem ReplaceParameters="false" TargetFileName="Readme.txt">EXPORTS\Readme.txt</ProjectItem>
+    <Project TargetFileName="My Static Library.vcxproj" File="My Static Library.vcxproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="false" TargetFileName="$projectname$.vcxproj.filters">My Static Library.vcxproj.filters</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="$projectname$.vcxproj.user">My Static Library.vcxproj.user</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="dummy.cc">src\dummy.cc</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="dummy.txt">exports\dummy.txt</ProjectItem>
     </Project>
   </TemplateContent>
 </VSTemplate>

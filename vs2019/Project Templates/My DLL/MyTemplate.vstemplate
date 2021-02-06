@@ -14,11 +14,12 @@
     <Icon>__TemplateIcon.ico</Icon>
   </TemplateData>
   <TemplateContent>
-    <Project TargetFileName="Dll1.vcxproj" File="Dll1.vcxproj" ReplaceParameters="true">
-      <ProjectItem ReplaceParameters="false" TargetFileName="$projectname$.vcxproj.filters">Dll1.vcxproj.filters</ProjectItem>
-      <ProjectItem ReplaceParameters="false" TargetFileName="dllmain.cc">SRC\dllmain.cc</ProjectItem>
-      <ProjectItem ReplaceParameters="false" TargetFileName="module.def">SRC\module.def</ProjectItem>
-      <ProjectItem ReplaceParameters="false" TargetFileName="Readme.txt">EXPORTS\Readme.txt</ProjectItem>
+    <Project TargetFileName="My DLL.vcxproj" File="My DLL.vcxproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="false" TargetFileName="$projectname$.vcxproj.filters">My DLL.vcxproj.filters</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="$projectname$.vcxproj.user">My DLL.vcxproj.user</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="dllmain.cc">src\dllmain.cc</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="module.def">src\module.def</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="dummy.txt">exports\dummy.txt</ProjectItem>
     </Project>
   </TemplateContent>
 </VSTemplate>

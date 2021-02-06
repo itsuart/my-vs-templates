@@ -15,29 +15,11 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="src\main.cc">
+    <ClCompile Include="src\dummy.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="res\small.ico">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="res\WindowsProject1.ico">
-      <Filter>Resource Files</Filter>
-    </Image>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="libs\Readme.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="res\WindowsProject1.rc">
-      <Filter>Resource Files</Filter>
-    </ResourceCompile>
+    <Text Include="exports\dummy.txt" />
   </ItemGroup>
 </Project>

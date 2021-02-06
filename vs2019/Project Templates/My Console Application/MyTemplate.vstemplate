@@ -14,10 +14,10 @@
     <Icon>__TemplateIcon.ico</Icon>
   </TemplateData>
   <TemplateContent>
-    <Project TargetFileName="Console Applicaiton For Windows2.vcxproj" File="Console Applicaiton For Windows2.vcxproj" ReplaceParameters="true">
-      <ProjectItem ReplaceParameters="false" TargetFileName="$projectname$.vcxproj.filters">Console Applicaiton For Windows2.vcxproj.filters</ProjectItem>
-      <ProjectItem ReplaceParameters="false" TargetFileName="main.cc">SRC\main.cc</ProjectItem>
-      <ProjectItem ReplaceParameters="false" TargetFileName="Readme.txt">LIBS\Readme.txt</ProjectItem>
+    <Project TargetFileName="My Console Application.vcxproj" File="My Console Application.vcxproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="false" TargetFileName="$projectname$.vcxproj.filters">My Console Application.vcxproj.filters</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="$projectname$.vcxproj.user">My Console Application.vcxproj.user</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="main.cc">src\main.cc</ProjectItem>
     </Project>
   </TemplateContent>
 </VSTemplate>

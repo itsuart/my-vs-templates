@@ -15,11 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="libs\Readme.txt" />
-    <Text Include="exports\Readme.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="src\dummy.cc">
+    <ClCompile Include="src\main.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
